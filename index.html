@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lily of the Valley 3D — Botanical Sanctuary</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts untuk tipografi elegan -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Canvas 3D Latar Belakang -->
+    <div id="canvas-container"></div>
+
+    <!-- Overlay Antarmuka Pengguna -->
+    <div class="ui-wrapper">
+        <!-- Header & Navigasi -->
+        <header class="glass-header">
+            <div class="logo">
+                <span class="gold-dot"></span>
+                <h1>CONVALLARIA <span class="gold-text">3D</span></h1>
+            </div>
+            <nav class="nav-buttons" id="nav-menu">
+                <button class="nav-btn active" data-page="home">Beranda</button>
+                <button class="nav-btn" data-page="majalis">Classic Majalis</button>
+                <button class="nav-btn" data-page="rosea">Pink Rosea</button>
+                <button class="nav-btn" data-page="albostriata">Gold Albostriata</button>
+                <button class="nav-btn" data-page="plena">Double Plena</button>
+            </nav>
+        </header>
+
+        <!-- Konten Halaman Dinamis -->
+        <main class="content-area">
+            <div class="glass-card" id="info-card">
+                <span class="badge" id="page-badge">KOLEKSI BOTANI 3D</span>
+                <h2 id="page-title">Lily of the Valley</h2>
+                <p class="latin-name" id="page-latin">Convallaria majalis</p>
+                <p class="description" id="page-desc">
+                    Jelajahi keindahan kelopak lonceng putih bercahaya yang melayang di bawah langit malam biru tua bertabur partikel emas. Gunakan mouse/sentuhan untuk memutar bunga 3D.
+                </p>
+
+                <!-- Spesifikasi Singkat -->
+                <div class="specs-grid" id="page-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Aroma</span>
+                        <span class="spec-value">Manis & Segar</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Cahaya Kelopak</span>
+                        <span class="spec-value">Putih Kristal</span>
+                    </div>
+                </div>
+
+                <!-- Tombol Aksi Cepat ke Halaman Jenis Bunga -->
+                <div class="action-buttons">
+                    <button class="btn-primary" onclick="nextPage()">Jelajahi Varietas Berikutnya →</button>
+                    <button class="btn-secondary" id="toggle-spin">Jeda Rotasi</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="glass-footer">
+            <p>Geser layar untuk memutar objek 3D • Scroll untuk memperbesar</p>
+        </footer>
+    </div>
+
+    <!-- Three.js & OrbitControls via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
